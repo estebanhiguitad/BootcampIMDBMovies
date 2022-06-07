@@ -13,7 +13,6 @@ import javax.inject.Singleton
 abstract class DataSourceModule {
 
     @Binds
-    @Singleton
     abstract fun bindRetrofitExampleDataSource(retrofitExampleDataSourceImpl: RetrofitExampleDataSourceImpl): RetrofitExampleDataSource
 
 }

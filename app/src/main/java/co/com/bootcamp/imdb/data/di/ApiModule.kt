@@ -11,6 +11,5 @@ import javax.inject.Singleton
 object ApiModule {
 
     @Provides
-    @Singleton
     fun provideApi() = Any()
 }
