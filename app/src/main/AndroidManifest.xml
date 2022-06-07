@@ -4,13 +4,14 @@
 
     <application
         android:allowBackup="true"
+        android:name=".app.BootcampImdbMoviesApp"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Imdb">
         <activity
-            android:name=".userinterface.MainActivity"
+            android:name=".userinterface.SearchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
