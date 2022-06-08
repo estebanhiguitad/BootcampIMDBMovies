@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Imdb">
         <activity
-            android:name=".userinterface.SearchActivity"
+            android:name=".presentation.ui.SearchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
