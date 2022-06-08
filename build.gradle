@@ -9,6 +9,9 @@ buildscript {
         hiltDagger = "2.38.1"
         lifeCycleViewModel = "2.4.1"
         activityKTX = "1.4.0"
+        retrofitVersion = "2.9.0"
+        gsonVersion = "2.8.9"
+        gsonConverterVersion = "2.3.0"
     }
 
     dependencies {
