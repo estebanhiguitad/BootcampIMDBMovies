@@ -12,6 +12,7 @@ buildscript {
         retrofitVersion = "2.9.0"
         gsonVersion = "2.8.9"
         gsonConverterVersion = "2.3.0"
+        interceptorVersion = "3.9.1"
     }
 
     dependencies {
