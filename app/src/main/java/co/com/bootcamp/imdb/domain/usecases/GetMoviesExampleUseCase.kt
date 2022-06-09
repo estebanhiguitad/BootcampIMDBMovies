@@ -1,8 +1,7 @@
 package co.com.bootcamp.imdb.domain.usecases
 
-import co.com.bootcamp.imdb.domain.models.MovieExampleModel
-import kotlinx.coroutines.flow.Flow
+import co.com.bootcamp.imdb.domain.models.MovieListResponse
 
 interface GetMoviesExampleUseCase {
-    operator fun invoke(): Flow<List<MovieExampleModel>>
+    suspend operator fun invoke(): MovieListResponse
 }

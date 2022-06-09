@@ -1,16 +1,19 @@
 package co.com.bootcamp.imdb.data.repositories
 
-import co.com.bootcamp.imdb.data.source.RetrofitExampleDataSource
-import co.com.bootcamp.imdb.domain.models.MovieExampleModel
+import co.com.bootcamp.imdb.data.source.RetrofitExampleDataSourceImpl
+import co.com.bootcamp.imdb.data.source.RetrofitManager
+import co.com.bootcamp.imdb.domain.models.MovieListResponse
 import co.com.bootcamp.imdb.domain.repositories.MovieExampleRepository
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class MovieRemoteExampleRepository @Inject constructor(private val dataSource: RetrofitExampleDataSource) :
+class MovieRemoteExampleRepository @Inject constructor(private val dataSource: RetrofitExampleDataSourceImpl) :
     MovieExampleRepository {
 
-    override fun getTopMovies(): Flow<List<MovieExampleModel>> {
-        TODO("Implementar llamado al $dataSource para obtener las películas.")
+    companion object {
+        private const val listId: Int = 1
     }
 
+    override suspend fun getTopMovies(): MovieListResponse {
+        return dataSource.getMoviesList(listId, RetrofitManager.apiKey)
+    }
 }

@@ -8,6 +8,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 class RetrofitManager {
+    companion object {
+        private const val url: String = "https://api.themoviedb.org/3/"
+        const val apiKey: String = "c5c47722a4adcc77f6e84f28a48b857a"
+    }
+
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS)
         .writeTimeout(30, TimeUnit.SECONDS)
@@ -19,7 +24,7 @@ class RetrofitManager {
         .setLenient()
         .create()
 
-    fun create(url:String): RetrofitExampleDataSource {
+    fun create(): RetrofitExampleDataSource {
         val builder = Retrofit.Builder()
             .client(okHttpClient)
             .baseUrl(url)

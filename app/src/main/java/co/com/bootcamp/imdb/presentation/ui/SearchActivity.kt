@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import co.com.bootcamp.imdb.R
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 
 @AndroidEntryPoint
 class SearchActivity : AppCompatActivity() {
@@ -14,5 +16,6 @@ class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        viewModel.getMovies()
     }
 }

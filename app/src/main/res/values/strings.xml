@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">imdb</string>
+    <string name="error_desconocido">Ha ocurrido un error desconocido, por favor intente más tarde</string>
+    <string name="verifique_la_conexion_a_internet">Por favor verifique la conexión a internet</string>
 </resources>

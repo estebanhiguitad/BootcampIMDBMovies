@@ -1,8 +1,7 @@
 package co.com.bootcamp.imdb.domain.repositories
 
-import co.com.bootcamp.imdb.domain.models.MovieExampleModel
-import kotlinx.coroutines.flow.Flow
+import co.com.bootcamp.imdb.domain.models.MovieListResponse
 
 interface MovieExampleRepository {
-    fun getTopMovies() : Flow<List<MovieExampleModel>>
+    suspend fun getTopMovies() : MovieListResponse
 }
