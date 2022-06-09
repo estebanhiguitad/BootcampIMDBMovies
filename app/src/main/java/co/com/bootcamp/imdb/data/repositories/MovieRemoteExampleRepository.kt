@@ -14,6 +14,7 @@ class MovieRemoteExampleRepository @Inject constructor(private val dataSource: R
     }
 
     override suspend fun getTopMovies(): MovieListResponse {
-        return dataSource.getMoviesList(listId, RetrofitManager.apiKey)
+        var response : MovieListResponse = dataSource.getMoviesList(listId, RetrofitManager.apiKey)
+        return response
     }
 }
