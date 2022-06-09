@@ -10,7 +10,7 @@ data class MovieListResponse(
     val createdBy: String,
 
     @SerializedName("favorite_count")
-    val favoriteCount: Integer,
+    val favoriteCount: Int,
 
     @SerializedName("items")
     val moviesList: List<Movie>

@@ -1,11 +1,10 @@
 package co.com.bootcamp.imdb.domain.models
 
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class Movie(
     @SerializedName("id")
-    val id: Integer,
+    val id: Int,
 
     //@SerializedName("poster_path")
     @SerializedName("backdrop_path")
