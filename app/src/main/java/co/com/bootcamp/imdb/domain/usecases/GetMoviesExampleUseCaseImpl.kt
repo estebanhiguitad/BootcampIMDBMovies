@@ -7,7 +7,7 @@ import javax.inject.Inject
 class GetMoviesExampleUseCaseImpl @Inject constructor(private val repository: MovieExampleRepository) :
     GetMoviesExampleUseCase {
 
-    override suspend fun invoke(): MovieListResponse {
-        return repository.getTopMovies()
+    override suspend fun invoke(listId: Int?): MovieListResponse {
+        return repository.getTopMovies(listId)
     }
 }

@@ -12,7 +12,7 @@ class SearchViewModel @Inject constructor(
     private val getMoviesExampleUseCase: GetMoviesExampleUseCaseImpl
 ) : ViewModel() {
 
-    fun getMovies() = viewModelScope.launch() {
-        getMoviesExampleUseCase.invoke()
+    fun getMovies(listId: Int?) = viewModelScope.launch() {
+        getMoviesExampleUseCase.invoke(listId)
     }
 }

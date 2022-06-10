@@ -9,12 +9,7 @@ import javax.inject.Inject
 class MovieRemoteExampleRepository @Inject constructor(private val dataSource: RetrofitExampleDataSourceImpl) :
     MovieExampleRepository {
 
-    companion object {
-        private const val listId: Int = 1
-    }
-
-    override suspend fun getTopMovies(): MovieListResponse {
-        var response : MovieListResponse = dataSource.getMoviesList(listId, RetrofitManager.apiKey)
-        return response
+    override suspend fun getTopMovies(listId: Int?): MovieListResponse {
+        return dataSource.getMoviesList(listId, RetrofitManager.apiKey)
     }
 }

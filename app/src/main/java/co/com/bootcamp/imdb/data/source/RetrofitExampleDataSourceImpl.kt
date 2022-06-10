@@ -1,6 +1,6 @@
 package co.com.bootcamp.imdb.data.source
 
-import co.com.bootcamp.imdb.domain.models.Movie
+import android.util.Log
 import co.com.bootcamp.imdb.domain.models.MovieListResponse
 import co.com.bootcamp.imdb.presentation.di.IoDispatcher
 import kotlinx.coroutines.CoroutineDispatcher
@@ -17,9 +17,8 @@ class RetrofitExampleDataSourceImpl @Inject constructor(
 
     suspend fun getMoviesList(listId: Int?, apiKey: String?): MovieListResponse {
         return withContext(dispatcher) {
-            // ERROR con el api
-            val movieCall = api.create().getMoviesList(listId, apiKey)
-            movieCall
+            Log.e("Hola", api.create().getMoviesList(listId, apiKey).moviesList[0].description)
+            api.create().getMoviesList(listId, apiKey)
         }
     }
 }
